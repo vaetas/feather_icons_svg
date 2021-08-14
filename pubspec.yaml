@@ -1,5 +1,5 @@
 name: feather_icons_svg
-description: Feather Icons SVG allows to customize line thickness.
+description: Feather Icons SVG allows to customize stroke width in runtime. Uses flutter_svg instead of icon font.
 version: 0.1.0
 homepage: https://github.com/vaetas/feather_icons_svg
 
