@@ -19,7 +19,7 @@ class MyExampleWidget extends StatelessWidget {
 }
 ```
 
-You can also use `FeatherIconsTheme` inherited widget to customize default values for Widget
+You can also use `FeatherIconTheme` inherited widget to customize default values for Widget
 subtree.
 
 ## Install

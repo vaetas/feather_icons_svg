@@ -17,7 +17,7 @@ class ExampleApp extends StatelessWidget {
           color: Colors.black,
         ),
       ),
-      home: FeatherIconsTheme(
+      home: FeatherIconTheme(
         strokeWidth: 1.5,
         child: MyHomePage(title: 'Flutter Demo Home Page'),
       ),
@@ -47,8 +47,11 @@ class _MyHomePageState extends State<MyHomePage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              FeatherIcon(FeatherIcons.arrowLeft),
-              FeatherIcon(FeatherIcons.arrowRight),
+              IconTheme(
+                data: IconThemeData(color: Colors.green, size: 40),
+                child: FeatherIcon(FeatherIcons.arrowLeft),
+              ),
+              FeatherIcon(FeatherIcons.arrowRight, size: 40),
               FeatherIcon(
                 FeatherIcons.calendar,
                 color: Colors.blue,

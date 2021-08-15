@@ -1,33 +1,26 @@
 import 'package:flutter/material.dart';
 
 /// Define default values for Feather Icons for all subtree.
-class FeatherIconsTheme extends InheritedWidget {
-  const FeatherIconsTheme({
+///
+/// To customize icon color use [IconTheme] instead.
+class FeatherIconTheme extends InheritedWidget {
+  const FeatherIconTheme({
     Key? key,
-    this.color,
-    this.size,
     this.strokeWidth = 2.0,
     required Widget child,
   }) : super(key: key, child: child);
 
-  /// [color] defaults to `Theme.of(context).iconTheme.color` when not set.
-  final Color? color;
-
-  /// [size] defaults to `Theme.of(context).iconTheme.size` when not set.
-  final double? size;
-
-  /// [strokeWidth] has no equivalent in [IconThemeData], therefore needs to be
-  /// not null. Defaults to 2.0
+  /// Defaults to 2.0
   final double strokeWidth;
 
-  /// Get closest [FeatherIconsTheme] above in the Widget tree.
-  static FeatherIconsTheme? of(BuildContext context) {
-    final FeatherIconsTheme? result =
-        context.dependOnInheritedWidgetOfExactType<FeatherIconsTheme>();
+  /// Get closest [FeatherIconTheme] above in the Widget tree.
+  static FeatherIconTheme? of(BuildContext context) {
+    final FeatherIconTheme? result =
+        context.dependOnInheritedWidgetOfExactType<FeatherIconTheme>();
     return result;
   }
 
   @override
-  bool updateShouldNotify(FeatherIconsTheme old) =>
-      color != old.color || strokeWidth != old.strokeWidth;
+  bool updateShouldNotify(FeatherIconTheme old) =>
+      strokeWidth != old.strokeWidth;
 }

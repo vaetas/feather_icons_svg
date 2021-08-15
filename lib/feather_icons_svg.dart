@@ -11,7 +11,6 @@ export 'src/theme.dart';
 
 /// Similarly to Material Icons, use [FeatherIcons] Widget to display the icon.
 ///
-///
 /// ```dart
 /// FeatherIcon(FeatherIcons.arrowLeft)
 /// ```
@@ -32,8 +31,11 @@ class FeatherIcon extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final theme = FeatherIconsTheme.of(context);
-    final _strokeWidth = _getStrokeWidth(theme);
+    final featherIconTheme = FeatherIconTheme.of(context);
+    final _strokeWidth = _getStrokeWidth(featherIconTheme);
+    final iconTheme = IconTheme.of(context);
+
+    final size = _getSize(iconTheme);
 
     return SvgPicture.string(
       _strokeWidth != 2
@@ -42,14 +44,14 @@ class FeatherIcon extends StatelessWidget {
               'stroke-width="$_strokeWidth"',
             )
           : icon.data,
-      color: _getColor(theme, Theme.of(context).iconTheme),
+      color: _getColor(featherIconTheme, iconTheme),
       width: size,
       height: size,
       alignment: Alignment.center,
     );
   }
 
-  double _getStrokeWidth(FeatherIconsTheme? theme) {
+  double _getStrokeWidth(FeatherIconTheme? theme) {
     if (strokeWidth != null) {
       return strokeWidth!;
     }
@@ -61,13 +63,9 @@ class FeatherIcon extends StatelessWidget {
     return 2.0;
   }
 
-  Color _getColor(FeatherIconsTheme? theme, IconThemeData iconTheme) {
+  Color _getColor(FeatherIconTheme? theme, IconThemeData iconTheme) {
     if (color != null) {
       return color!;
-    }
-
-    if (theme != null && theme.color != null) {
-      return theme.color!;
     }
 
     if (iconTheme.color != null) {
@@ -75,5 +73,17 @@ class FeatherIcon extends StatelessWidget {
     }
 
     return Colors.black;
+  }
+
+  double _getSize(IconThemeData iconTheme) {
+    if (size != null) {
+      return size!;
+    }
+
+    if (iconTheme.size != null) {
+      return iconTheme.size!;
+    }
+
+    return 24;
   }
 }
