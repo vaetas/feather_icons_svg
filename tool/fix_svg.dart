@@ -3,7 +3,7 @@ import 'dart:io';
 import 'package:path/path.dart' as p;
 
 Future<void> main() async {
-  final assetsDir = Directory(p.join(Directory.current.path, 'assets'));
+  final assetsDir = Directory(p.join(Directory.current.path, '.cache/icons/'));
   print('[fix_svg] Assets dir: $assetsDir');
   final files = await assetsDir.list().toList();
   for (final file in files) {

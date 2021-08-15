@@ -67,7 +67,7 @@ Future<void> main() async {
 
 Future<List<IconFile>> _getIconFiles() async {
   final files = await Directory(
-    p.join(Directory.current.path, 'assets'),
+    p.join(Directory.current.path, '.cache/icons'),
   ).list().toList();
   final _f = <IconFile>[];
   for (final file in files) {

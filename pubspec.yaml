@@ -19,5 +19,3 @@ dev_dependencies:
   recase: ^4.0.0
 
 flutter:
-  assets:
-    - assets/
