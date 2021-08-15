@@ -14,10 +14,13 @@ class ExampleApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
         iconTheme: IconThemeData(
-          color: Colors.red,
+          color: Colors.black,
         ),
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: FeatherIconsTheme(
+        strokeWidth: 1.5,
+        child: MyHomePage(title: 'Flutter Demo Home Page'),
+      ),
     );
   }
 }

@@ -19,6 +19,9 @@ class MyExampleWidget extends StatelessWidget {
 }
 ```
 
+You can also use `FeatherIconsTheme` inherited widget to customize default values for Widget
+subtree.
+
 ## Install
 
 Add `feather_icons_svg` package into your `pubspec.yaml`.
