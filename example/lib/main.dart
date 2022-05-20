@@ -57,7 +57,10 @@ class _MyHomePageState extends State<MyHomePage> {
                 color: Colors.blue,
               ),
               FeatherIcon(FeatherIcons.arrowLeft),
-              FeatherIcon(FeatherIcons.arrowRight),
+              FeatherIcon(
+                FeatherIcons.arrowRight,
+                strokeWidth: 3,
+              ),
               FeatherIcon(FeatherIcons.activity),
               FeatherIcon(
                 FeatherIcons.bell,

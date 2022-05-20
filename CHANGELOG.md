@@ -1,3 +1,8 @@
+## 0.3.0
+
+* fix: update dependencies
+* fix: do not replace currentColor property
+
 ## 0.2.1
 
 * fix: depend on correct `IconTheme`

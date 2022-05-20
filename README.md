@@ -34,8 +34,5 @@ flutter pub add flutter_icons_svg
 
 To fetch SVG icons from original Feather Icons repository, run `tool/fetch-icons.sh`.
 
-The SVG contains unsupported content. To fix all fetched icons, run `tool/fix_svg.dart`. This
-replaces invalid SVG attributes for every file and saves it.
-
 Finally, to run source code generation to create `flutter_icons_svg.dart` file with named
 constructor for every icon, run `tool/generator.dart`.

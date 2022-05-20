@@ -12,9 +12,5 @@ dependencies:
   feather_icons_svg:
     path: ..
 
-dev_dependencies:
-  flutter_test:
-    sdk: flutter
-
 flutter:
   uses-material-design: true
