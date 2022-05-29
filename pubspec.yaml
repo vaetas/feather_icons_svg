@@ -1,6 +1,6 @@
 name: feather_icons_svg
 description: Feather Icons SVG allows to customize stroke width in runtime. Uses flutter_svg instead of icon font.
-version: 0.3.0
+version: 0.4.0
 homepage: https://github.com/vaetas/feather_icons_svg
 
 environment:
@@ -10,7 +10,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  flutter_svg: ^1.0.3
+  flutter_svg: ^1.1.0
   path: ^1.8.2
 
 dev_dependencies:
