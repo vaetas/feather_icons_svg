@@ -1,3 +1,8 @@
+## 0.4.0
+
+* feat: remote currentColor prop from SVG files
+* fix: update flutter_svg
+
 ## 0.3.0
 
 * fix: update dependencies
